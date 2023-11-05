@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhuri Bhoj</title>
+  <style>
+    h1{
+      text-align: center;
+
+    }
+  
+    #body{
+      background-color: aqua;
+    }
+    #img{
+      text-align: center;
+      transform: translate(50% 50%);
+      position: absolute;
+      right: 290px;
+      
+      
+    }
+    #myForm{
+      text-align: center;
+      position: absolute;
+      top: 75%;
+      left: 30%;
+       
+    }
+
+    #second_page{
+      text-align: center;
+      position: absolute;
+      top: 81%;
+      left: 51%;
+    }
+  </style>
+</head>
+<body id="body">
+  <h1><u><i>Welcome to<br>Bhuri Bhoj</i></u></h1><br>
+  
+<img id="img" src="bhuribhoj.jpg" >
+<br><br>
+<form name="myForm" method="post" id="myForm" onsubmit="return myFunction()">
+Name:<input type="text" name="name" id="name">
+Password:<input type="password" name="password" id="password"><br><br>
+<input type="submit" value="login">
+</form>
+
+<form name="second_page" method="post" id="second_page" onsubmit="return secondPage()">
+  <input type="submit" value="signup">
+ </form>
+
+<script>
+  function myFunction(){
+    var name=document.myForm.name.value;
+    var Password=document.myForm.password.value;
+    if(name==null || name==""){
+      alert("please enter your name:");
+      return false;
+    }else if(Password.length<6){
+      alert("enter minimum 6 characters:");
+      return false;
+      
+    }
+  
+  } 
+   function secondPage()
+    {
+      window.open("http://127.0.0.1:54786/signup.html");
+
+    }
+
+</script>
+
+  
+  
+</body>
+</html>

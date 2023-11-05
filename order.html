@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+    
+<body>
+
+<h2 >Food ordering forms</h2>
+<img src="order.jpeg" >
+
+
+
+
+  <First name : input type="text" name="lname"><br>
+<Last name: input type="text" name="lname" ><br>
+
+  <label for=" foodname ">Foods:</label>
+  <select id=" foodname " name=" foodname ">
+    <option>select your orders
+
+      <option value="pizza">pizza</option>
+  <option value="chowmin"> chowmin</option>
+  <option value="momo"> momo</option>
+  <option value="biriyani"> Biriyani</option>
+  <option value="soup"> soup</option>
+  <option value="chawal"> chawal</option>
+  <option value="chicken"> chicken</option>
+  <option value="motton"> motton</option>
+  <option value="OTHERS"> OTHERS</optiform id="frm1" action="/action_page.php"><br>
+
+
+    </option>
+  
+
+  </select>
+ <label  for="payment option">Payment Methoed:</lable>
+ <select id="payment option" name="payment option">
+  <option value="online">online</option>
+  <option value="cash">Cash</option>
+ </select>
+<form id="frm2" action="/action_page.php"><br>
+<label for="online">If online then:</label>
+<select id="online option" name="online option">
+ <option value="debit/credit">debit/credit</option>
+ <option value="gpay/phonepe/Amazon pay">gpay/phonepe/Amazon pay</option><br>
+<script>
+window.alert();
+
+</script>
+</form> 
+<br>
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<br>
+
+<div>
+    <form>
+        <input type="submit" value="Submit">
+    </form>
+   
+</div>
+
+<script>
+function myFunction() {
+  var x = document.forms["frm1"];
+  var text = "";
+
+  text = text + x.elements[0].value + " " + x.elements[1].value
+
+  text = "Dear " + text  + "<br> You are hereby requested to submit your order  " + x.elements[2].value
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

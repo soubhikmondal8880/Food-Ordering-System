@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <style>
+        h1{ 
+            text-align: center;
+            color: rgb(198, 247, 21);
+        }
+        #myfrom{
+            text-align: center;
+            position: absolute;
+            top: 15px;
+            right: 55px;
+            left: 2px;
+            
+            transform: translate(5% , 8%);
+        }
+        body{
+            background-color: rgb(30, 179, 104);
+            background-image: url(signupimg.jpg);
+            background-size: 100%;
+            
+        }
+        div{
+            background-color: rgb(177, 221, 120);
+            height: 350px ;
+            width: 340px;
+            text-align: center;
+            position: absolute;
+            top: 55%;
+            left: 45%;
+            right: 50%;
+            transform: translate(-50% , -50%);
+            border: solid;
+            border-color: rgb(19, 18, 18);
+
+        }
+        #div2 {
+             height:50 ;
+            width: 40;
+            background-color: rgb(69, 143, 204);
+            position: absolute;
+            top: 39%;
+            left: 45%;
+           
+            
+           
+            transform: translate(-50% , -50%);
+
+        }
+        
+      
+    </style>
+</head>
+<body>
+      <div id="div2"><h1><i><u>Sign up</u></i></h1></div> 
+
+
+
+      <div>
+        <form name="sgnp" method="post" id="myfrom" onsubmit="return Signup1()">
+           FirstName:<input type="text" name="Fname" id="firstname"><br><br>
+           LastName:<input type="text" name="Lname" id="lastname"><br><br>
+           PhoneNumber:<input type="number" name="phn" id="phn"><br><br>
+           Email Id:<input type="email" name="eml" id="eml"><br><br>
+           Password: <input type="password" name="pass"><br><br>
+           ConfirmPassword: <input type="password" name="cnp"><br><br><br>
+           <input type="submit" value="Submit">
+          </form>
+        
+    </div>
+</head>
+<body>
+
+
+    <script>
+        function Signup1(){
+            var FirstName=document.sgnp.Fname.value;
+            var LastName=document.sgnp.Lname.value;
+            var Password=document.sgnp.pass.value;
+            var ConfirmPassword=document.sgnp.cnp.value;
+            var PhoneNumber=document.sgnp.phn.value;
+            var Email=document.sgnp.eml.value;
+            if(FirstName==null || FirstName==""){
+              alert("enter your first name");
+              return false;
+            }else if(LastName==null || LastName==""){
+                alert("Enter your last name");
+                return false;
+            }else if(Password.length<5){
+                alert("enter minimum 5 characters");
+                return false;
+            }else if(Password!=ConfirmPassword){
+                alert("password does not match");
+                return false;
+            }
+            window.open("http://127.0.0.1:54891/order.html")
+        }
+       
+    </script>
+    
+</body>
+</html>
